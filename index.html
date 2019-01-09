@@ -8,7 +8,7 @@
 
       Red Ball Pizza Survey Form
       Author: Bryan Vargas
-      Date:   01/07/18
+      Date:   01/07/19
 
       Filename:   rb_survey.html
 
@@ -19,6 +19,7 @@
    <title>Red Ball Survey</title>
    <link href="rb_reset.css" rel="stylesheet" />
    <link href="rb_styles.css" rel="stylesheet" />
+   <link rel="stylesheet" href="rb_forms.css">
 <script src="rb_formsubmit.js"></script>
 </head>
 
@@ -54,20 +55,34 @@
 <form id="survey">
    <fieldset id="custInfo">
       <legend>Customer Information</legend>
-      Name*
-      <input name="custName" id="name" type="text" />
-      steet address
-      <input name="custStreet" id="street" type="text" />
-      City
-      <input name="custCity" id="city" type="text" />
-      State
-      <input name="custState" id="state" type="text" />
-      Postal Code
-      <input name="custZip" id="zip" type="text" />
-      Phone Number
-      <input name="custPhone" id="phone" type="tel" />
-      Email
-      <input name="custEmail" id="mail" type="email" />
+ <div class="formrow">
+   <label for="name">Name*</label>
+   <input name="custName" id="name" type="text" placeholder="first and last name"/>
+ </div>
+<div class="formrow">
+   <label for="name">steet address</label>
+   <input name="custStreet" id="street" type="text" />
+</div>
+<div class="formrow">
+   <label for="name">City</label>
+   <input name="custCity" id="city" type="text" value="Ormond Beach" />
+</div>
+<div class="formrow">
+   <label for="name">State</label>
+   <input name="custState" id="state" type="text" value="FL" />
+</div>
+<div class="formrow">
+   <label for="name">Postal Code</label>
+   <input name="custZip" id="zip" type="text" placeholder="nnnnn (-nnnn)"/>
+</div>
+<div class="formrow">
+   <label for="name">Phone Number</label>
+   <input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn"/>
+</div>
+<div class="formrow">
+   <label for="name"> Email</label>
+   <input name="custEmail" id="mail" type="email" />
+</div>
    </fieldset>
    <fieldset id="expInfo">
       <legend>Share Your Experience at Red Ball Pizza</legend>
