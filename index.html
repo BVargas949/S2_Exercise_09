@@ -54,6 +54,7 @@
       parties, <em>ever</em>. </p>
     <p>Required values are marked by an asterisk (*)</p>
     <form id="survey" action="http://www.example.com/redball/survey" method="POST">
+      <!-- survey 1 -->
       <fieldset id="custInfo">
         <legend>Customer Information</legend>
         <div class="formrow">
@@ -61,32 +62,103 @@
           <input name="custName" id="name" type="text" placeholder="first and last name" />
         </div>
         <div class="formrow">
-          <label for="name">steet address</label>
+          <label for="street">steet address</label>
           <input name="custStreet" id="street" type="text" />
         </div>
         <div class="formrow">
-          <label for="name">City</label>
+          <label for="city">City</label>
           <input name="custCity" id="city" type="text" value="Ormond Beach" />
         </div>
         <div class="formrow">
-          <label for="name">State</label>
+          <label for="state">State</label>
           <input name="custState" id="state" type="text" value="FL" />
         </div>
         <div class="formrow">
-          <label for="name">Postal Code</label>
+          <label for="zip">Postal Code</label>
           <input name="custZip" id="zip" type="text" placeholder="nnnnn (-nnnn)" />
         </div>
         <div class="formrow">
-          <label for="name">Phone Number</label>
+          <label for="phone">Phone Number</label>
           <input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn" />
         </div>
         <div class="formrow">
-          <label for="name"> Email</label>
-          <input name="custEmail" id="mail" type="email" />
+          <label for="email"> Email</label>
+          <input name="custEmail" id="email" type="text" />
         </div>
+
+        <div class="formrow">
+          <label for="info">Where did you here about us <br> (select all that apply) </label>
+          <select name="infoSrc" id="info" size="5" multiple>
+            <option value="internet">internet</option>
+            <option value="mag">magazine</option>
+            <option value="news">Newspaper</option>
+            <option value="word">Word of Mouth</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="formrow">
+          <label for="dineSpin">How many times do you dine out per month?</label>
+          <input type="number" name="dineOut" id="dineSpin" value="1" step="1" min="0" max="20" />
+        </div>
+
+        <input type="checkbox" name="mailMe" id="mailCB" value="yes" />
+        <label for="mailCB">Add me to your mailing list for great coupons and Specials</label>
       </fieldset>
+      <!-- survey 2 -->
       <fieldset id="expInfo">
         <legend>Share Your Experience at Red Ball Pizza</legend>
+        <div class="formrow">
+          <label for="visit">Date of visit</label>
+          <input type="date" name="visible" id="visit" />
+        </div>
+
+        <div class="formrow">
+          <label for="order">Order Type</label>
+          <select name="ordertype" id="order">
+            <option value="order1">Carry Out</option>
+            <option value="order2">Delivery</option>
+            <option value="order3">Dine In</option>
+            <option value="order4">Take n' Bake</option>
+          </select>
+        </div>
+
+        <div class="formrow">
+          <label>Was your service friendly?</label>
+          <fieldset class="optGroup">
+            <label for="fYes">Yes</label>
+            <input type="radio" name="sFriend" id="fYes" value="Yes" />
+
+            <label for="fNo">No</label>
+            <input type="radio" name="sFriend" id="fNo" value="no" />
+          </fieldset>
+        </div>
+
+
+
+        <div class="formrow">
+          <label>Was your order correct?</label>
+          <fieldset class="optGroup">
+            <label for="cYes">Yes</label>
+            <input type="radio" name="sFriend" id="cYes" value="yes" />
+
+            <label for="cNo">No</label>
+            <input type="radio" name="sFriend" id="cNo" value="no" />
+          </fieldset>
+        </div>
+
+        <div class="formrow">
+          <label>Was your food hot?</label>
+          <fieldset class="optGroup">
+            <label for="hYes">Yes</label>
+            <input type="radio" name="sFriend" id="hYes" value="Yes" />
+
+            <label for="hNo">No</label>
+            <input type="radio" name="sFriend" id="hNo" value="no" />
+          </fieldset>
+        </div>
+        <label for="commbox">Tell us more about your experience!</label>
+        <textarea name="custExp" id="commBox" cols="30" rows="10"></textarea>
       </fieldset>
     </form>
 
